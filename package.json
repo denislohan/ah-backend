@@ -9,7 +9,7 @@
     "ls": "cd src/models && ls && sequelize db:migrate && node index.js",
 
     "start": "cd src/models && sequelize db:migrate && cd ../ && node index",
-    "build": "babel --presets es2015 -d lib/ src -s --ignore 'node_modules/**/*.js' && cd src/models && sequelize db:migrate && cd ../.. && nodemon lib/index.js",
+    "build": "babel --presets es2015 -d lib/ src -s --ignore 'node_modules/**/*.js' && cd src/models  && cp -rf config/ ../../lib/models/config && sequelize db:migrate && cd ../.. && node lib/index.js",
     "clean": "rm -rf lib && mkdir lib"
   },
   "author": "Denis",
