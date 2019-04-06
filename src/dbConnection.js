@@ -1,7 +1,6 @@
 
 const Sequelize = require('sequelize');
 const config = require('./models/config/config.json')[process.env.NODE_ENV]
-console.log(config);
 
         let sequelize = new Sequelize(config.database, config.username, config.password, {
             host: config.host,

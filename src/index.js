@@ -13,7 +13,6 @@ const passport=require('passport')
 
 const StraTegyFactory= require('./utils/StrategyFactory')
 const AuthAdapter = require('./utils/adapters/authAdapter')
-//require('./utils/authentication/passport')
 
 
 app.use(function(req, res, next) {
@@ -51,9 +50,5 @@ app.use('/article',articleRoutes);
 app.use('/chat',chatRoutes);
 app.use('/api/user',userRoutes);
 
-
-
-
-
 const port =process.env.PORT || 3000;
-app.listen(port,()=>{console.log('listening on port'+port)})
+app.listen(port,()=>{console.log('listening on port '+port+ " in "+process.env.NODE_ENV)})
