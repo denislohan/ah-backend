@@ -46,5 +46,8 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "mocha": "^6.0.2"
+  },
+  "engines": {
+    "node": "11.10.0"
   }
 }
