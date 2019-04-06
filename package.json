@@ -7,7 +7,7 @@
     "test": "mocha $(find test -name '*.js')",
     "local": "babel-node --presets es2015 src/index.js",
     "ls": "cd src/models && ls && sequelize db:migrate && node index.js",
-    "start": "cd src/models && sequelize db:migrate && cd ../ && node index",
+    "start": "node lib/index",
     "build": "npm install && babel --presets es2015 -d lib/ src -s --ignore 'node_modules/**/*.js' && cd src/models  && cp -rf config/ ../../lib/models/config && cd ../..",
     "clean": "rm -rf lib && mkdir lib"
   },
